@@ -7,10 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "watch": "webpack --config ./webpack.config.js --watch",
-    "build": "webpack --config ./webpack.config.js",
+    "watch": "rollup -c --watch",
+    "build": "rollup -c",
     "test": "mocha -R spec --recursive test",
-    "lint": "eslint lib test .eslintrc.js --ignore-pattern '!.eslintrc.js'"
+    "lint": "eslint lib test .eslintrc.js *.mjs --ignore-pattern '!.eslintrc.js'"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "license-webpack-plugin": "4.0.2",
     "mocha": "^10.2.0",
     "prettier": "^2.8.8",
-    "webpack": "5.82.1"
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "rollup": "^3.21.8"
   }
 }
