@@ -107,7 +107,7 @@ describe("Evaluator", function () {
   });
   it("should throw when transform does not exist", function () {
     var e = new Evaluator(grammar);
-    return e.eval(toTree('"hello"|world')).should.reject;
+    return e.eval(toTree('"hello"|world')).should.be.rejected;
   });
   it("should apply the DivFloor operator", function () {
     var e = new Evaluator(grammar);
