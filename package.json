@@ -37,14 +37,14 @@
   },
   "homepage": "https://github.com/mozilla/mozjexl",
   "devDependencies": {
-    "chai": "^2.0.0",
-    "chai-as-promised": "^4.2.0",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
     "eslint": "^8.24.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "license-webpack-plugin": "0.5.1",
-    "mocha": "^2.1.0",
-    "prettier": "^1.10.2",
-    "webpack": "3.1.0"
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "license-webpack-plugin": "4.0.2",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.8",
+    "webpack": "5.82.1"
   }
 }
