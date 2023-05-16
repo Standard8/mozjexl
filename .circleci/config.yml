@@ -1,9 +1,9 @@
 version: 2
 
 shared:
-  node12: &node12
+  node: &node
     docker:
-      - image: cimg/node:12.22
+      - image: cimg/node:16.16
 
   restore-yarn-cache: &restore-yarn-cache
     restore_cache:
@@ -39,28 +39,28 @@ shared:
           command: yarn lint
 
 jobs:
-  build-node12:
+  build-node:
     <<: *build
-    <<: *node12
+    <<: *node
 
-  test-node12:
+  test-node:
     <<: *test
-    <<: *node12
+    <<: *node
 
-  lint-node12:
+  lint-node:
     <<: *lint
-    <<: *node12
+    <<: *node
 
 workflows:
   version: 2
   pr:
     jobs:
-      - build-node12
+      - build-node
 
-      - lint-node12:
+      - lint-node:
           requires:
-            - build-node12
+            - build-node
 
-      - test-node12:
+      - test-node:
           requires:
-            - build-node12
+            - build-node
